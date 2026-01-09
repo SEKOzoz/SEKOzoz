@@ -1,1 +1,1 @@
-aalert("JS çalışıyor");
+alert("JS yüklendi");
