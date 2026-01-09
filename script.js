@@ -1,5 +1,5 @@
-const ACCESS_DAYS = 1 / 1440; // 1 dakika
 const PASSWORD = "nirvana";
+const ACCESS_MS = 60 * 1000; // 1 dakika
 
 function toggleMenu() {
   document.getElementById("sidebar").classList.toggle("active");
@@ -9,8 +9,8 @@ function checkPassword() {
   const input = document.getElementById("passwordInput").value.trim();
 
   if (input === PASSWORD) {
-    const now = Date.now();
-    localStorage.setItem("accessTime", now);
+    const expireTime = Date.now() + ACCESS_MS;
+    localStorage.setItem("expireTime", expireTime);
     grantAccess();
   } else {
     document.getElementById("error").innerText = "Yanlış şifre";
@@ -22,17 +22,22 @@ function grantAccess() {
   document.getElementById("protectedContent").style.display = "block";
 }
 
+/* SAYFA AÇILINCA KONTROL */
 function checkAccess() {
-  const savedTime = localStorage.getItem("accessTime");
-  if (!savedTime) return;
+  const expireTime = localStorage.getItem("expireTime");
+  if (!expireTime) return;
 
-  const now = Date.now();
-  const diffDays = (now - savedTime) / (1000 * 60 * 60 * 24);
-
-  if (diffDays < ACCESS_DAYS) {
+  if (Date.now() < expireTime) {
     grantAccess();
+
+    // ⏳ süre dolunca OTOMATİK AT
+    setTimeout(() => {
+      localStorage.removeItem("expireTime");
+      location.reload();
+    }, expireTime - Date.now());
+
   } else {
-    localStorage.removeItem("accessTime"); // süresi doldu
+    localStorage.removeItem("expireTime");
   }
 }
 
