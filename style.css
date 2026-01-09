@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 200px;
+  height: 100%;
+  background: #000;
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: #222;
+  color: #fff;
+}
+
+.content {
+  padding: 80px 20px;
+}
