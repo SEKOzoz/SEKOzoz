@@ -40,6 +40,18 @@ body {
   background: #222;
   color: #fff;
 }
+body {
+  margin: 0;
+}
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 
 .content {
   padding: 80px 20px;
