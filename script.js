@@ -1,3 +1,5 @@
+alert("JS çalışıyor");
+
 function toggleMenu() {
   const sidebar = document.getElementById("sidebar");
   if (sidebar.style.left === "0px") {
