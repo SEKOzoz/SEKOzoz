@@ -1,7 +1,21 @@
+index.html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body><div class="content" id="loadingScreen" style="display:none;">
+  <h2>Arşiv yükleniyor...</h2>
+  <p>Lütfen bekleyin</p>
+</div>
+
+
 <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 <div id="sidebar" class="sidebar">
-  <a href="#">Dosyalar</a>
+<a href="dosyalar.html">Dosyalar</a>
   <a href="#">Canlı Kayıtlar</a>
   <a href="#">Videolar</a>
   <a href="#">Hakkında</a>
@@ -15,25 +29,12 @@
   <p id="error" style="color:red;"></p>
 </div>
 
-<div class="content" id="loadingScreen" style="display:none;">
-  <h2>Arşiv yükleniyor...</h2>
-  <p>Lütfen bekleyin</p>
-</div>
-
 <div class="content" id="protectedContent" style="display:none;">
   <h1>Hoş geldin</h1>
   <p>Arşiv yüklendi.</p>
 </div>
 
+
 <script src="script.js"></script>
-#loginBox {
-  z-index: 30;
-}
-
-#loadingScreen {
-  z-index: 20;
-}
-
-#protectedContent {
-  z-index: 10;
-}
+</body>
+</html>
