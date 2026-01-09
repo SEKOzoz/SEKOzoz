@@ -17,10 +17,19 @@ index.html
   <a href="#">Hakkında</a>
 </div>
 
-<div class="content" id="protectedContent">
+<div class="content" id="loginBox">
+  <h2>Giriş</h2>
+  <input type="password" id="passwordInput" placeholder="Şifre">
+  <br><br>
+  <button onclick="checkPassword()">Gir</button>
+  <p id="error" style="color:red;"></p>
+</div>
+
+<div class="content" id="protectedContent" style="display:none;">
   <h1>Hoş geldin</h1>
   <p>Arşiv yüklendi.</p>
 </div>
+
 
 <script src="script.js"></script>
 </body>
