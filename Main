@@ -1,0 +1,12 @@
+index.html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kişisel Sayfa</title>
+</head>
+<body>
+  <h2>Hoş geldiniz</h2>
+  <p>Bu sayfa kişisel notlar için oluşturulmuştur.</p>
+</body>
+</html>
