@@ -1,4 +1,4 @@
-const PASSWORD = "nirvana";
+const PASSWORD = "nirvana2";
 const ACCESS_MS = 60 * 1000; // 1 dakika
 
 function toggleMenu() {
