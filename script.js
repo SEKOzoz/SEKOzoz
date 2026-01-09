@@ -6,8 +6,7 @@ function toggleMenu() {
     sidebar.style.left = "0px";
   }
 }
-const password = "inutero"; // BURAYI DEĞİŞTİR
-
+const password = "inutero";
 window.onload = function () {
   const input = prompt("Giriş kelimesi:");
 
